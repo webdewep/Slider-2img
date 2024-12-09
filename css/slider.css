@@ -1,0 +1,211 @@
+      /* Основной блок слайдера */
+      .slider {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        overflow: hidden;
+      }
+
+
+      .slider__image-left {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      /* Правый блок */
+      .slider__right-block {
+        width: 49%;
+        max-width: 900px;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .slider__content {
+        position: relative;
+
+      }
+
+      .slider__content img {
+        margin-bottom: 30px;
+      }
+
+      .slider__product-image {
+        width: 100%;
+        height: auto;
+      }
+      .right-block--img img{
+        background-color: #EDEBE9;
+      }
+      .product-title__slide{
+        padding-top: 20px;
+      }
+      .slider__product-description {
+        margin-top: 10px;
+        font-size: 18px;
+        color: #333;
+      }
+
+      /* Навигационные стрелки */
+      .slider__navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .slider__arrow {
+        background-color: transparent;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 10px;
+      }
+
+      .slider__arrow--prev {
+        margin-right: 5px;
+      }
+
+      .slider__arrow--next {
+        margin-left: 5px;
+      }
+
+      /* Hover-эффект для стрелок */
+      .slider__arrow:hover svg path {
+        stroke: red;
+    }
+      .slider__arrow:hover {
+        color:red;
+      }
+
+      /* Навигационные точки */
+      .slider__dots {
+        display: none;
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      .slider__dot {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border: 1px solid red;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .slider__dot.active {
+        background-color: red;
+      }
+
+      /* Анимации (включение по классу) */
+      .fade {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      .active.fade {
+        opacity: 1;
+      }
+
+      /* Стрелки для слайдера */
+      .slider-controls {
+        display: flex;
+        gap: 10px;
+        /* margin-top: 20px; */
+        /* margin-bottom: 10px; */
+        margin-left: 0;
+      }
+
+      .slider-controls button {
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 50%;
+        background-color: white;
+        cursor: pointer;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #d4d4d4;
+      }
+
+      .slider-controls button:hover {
+        color: red;
+      }
+
+      .slider-controls button:focus {
+        outline: none;
+      }
+
+      /* Адаптивный дизайн для экранов шириной 768px и меньше */
+      @media (max-width: 1300px){
+        /* .left-block {
+          width: 50%;
+          max-width: 100%;
+      } */
+        .left-block img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      @media (max-width: 768px) {
+        .product-title__slide h3 {
+          width: 100%;
+          font-weight: 300;
+          font-size: 32px;
+          line-height: 30px;
+        }
+
+        .slider__product-description {
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .slider {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .left-block {
+          width: auto;
+          max-width: 440px;
+        }
+
+        .right-block {
+          width: auto;
+          max-width: 440px;
+          padding-left: 0;
+        }
+
+        .right-block--img {
+          display: flex;
+          order: 2;
+        }
+
+        .product-title__slide {
+          margin-top: 20px;
+          min-height: 100px;
+        }
+
+        /* Прячем стрелки и показываем точки на мобильных устройствах */
+        .slider-controls {
+          display: none;
+        }
+
+        .slider__dots {
+          margin-top: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+        }
+      }

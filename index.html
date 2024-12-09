@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <link rel="stylesheet" href="css/media.css"> -->
+<link rel="stylesheet" href="css/slider.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<title>Слайдер</title>
+
+</head>
+
+<body>
+
+
+
+<div class="container">
+    <div class="slider">
+        <!-- Левый блок с фото модели -->
+        <div class="slider__left-block left-block">
+            <img src="img/slide1.jpg" alt="Модель" class="slider__image-left fade active">
+        </div>
+
+        <!-- Правый блок с изображением товара -->
+        <div class="right-block">
+            <div class="right-block--img">
+                <img src="img/slide1-1.png" alt="Очки Milo" class="slider__product-image fade active">
+            </div>
+            <div class="product-title__slide">
+                <p class="slider__product-title fade active">LINDA FARROW</p>
+                <h3 class="slider__product-description fade active">
+                    Очки Milo из никеля и розового золота
+                </h3>
+            </div>
+            <!-- Навигационные стрелки -->
+            <div class="slider-controls">
+                <button class="slider__arrow slider__arrow--prev">
+                    <!-- <i class="ic ic-left" aria-hidden="true"></i> -->
+                    <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 7.64648L7.64642 0.999999" stroke="#3E3E3E" stroke-linecap="round"/>
+                        <path d="M1 7.64648L7.64642 14.293" stroke="#3E3E3E" stroke-linecap="round"/>
+                        </svg>
+                </button>
+                <button class="slider__arrow slider__arrow--next">
+                    <!-- <i class="ic-ic-right" aria-hidden="true"></i> -->
+                    <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.64648 7.64648L1.00006 0.999999" stroke="#3E3E3E" stroke-linecap="round"/>
+                        <path d="M7.64648 7.64648L1.00006 14.293" stroke="#3E3E3E" stroke-linecap="round"/>
+                        </svg>
+                        
+                </button>
+            </div>
+            <!-- Точки навигации для мобильной версии -->
+        </div>
+        <div class="slider__dots"></div>
+    </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="Js/slider.js"></script>
+
+
+<script>
+
+</script>
+
+</body>
+
+</html>
